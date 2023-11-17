@@ -1,0 +1,12 @@
+accessWidener	v1	named
+
+accessible method net/minecraft/fluid/FlowableFluid getSpread (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)Ljava/util/Map;
+
+accessible method net/minecraft/world/ChunkSerializer createCodec (Lnet/minecraft/registry/Registry;)Lcom/mojang/serialization/Codec;
+accessible field net/minecraft/world/ChunkSerializer CODEC Lcom/mojang/serialization/Codec;
+
+accessible method net/minecraft/world/storage/StorageIoWorker writeResult ()V
+
+accessible class net/minecraft/client/render/MapRenderer$MapTexture
+accessible method net/minecraft/client/render/MapRenderer getMapTexture (ILnet/minecraft/item/map/MapState;)Lnet/minecraft/client/render/MapRenderer$MapTexture;
+accessible field net/minecraft/client/render/MapRenderer$MapTexture texture Lnet/minecraft/client/texture/NativeImageBackedTexture;

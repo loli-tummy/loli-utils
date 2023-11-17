@@ -1,8 +1,10 @@
 {
   "required": true,
-  "package": "com.example.addon.mixin",
+  "package": "com.bnuyhq.loli_utils.mixin",
   "compatibilityLevel": "JAVA_17",
-  "client": [],
+  "client": [
+    "ClientPlayNetworkHandlerMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

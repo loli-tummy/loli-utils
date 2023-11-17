@@ -1,25 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "loli-utils",
   "version": "${version}",
-  "name": "Addon Template",
+  "name": "LoliUtils",
   "description": "An addon template for the Meteor addons.",
   "authors": [
-    "seasnail"
+    "loli-tummy"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/loli-tummy/loli-utils"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "com.bnuyhq.loli_utils.LoliUtils"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "loli-utils.mixins.json"
   ],
+  "accessWidener": "loli-utils.accesswidener",
   "custom": {
     "meteor-client:color": "225,25,25"
   },
