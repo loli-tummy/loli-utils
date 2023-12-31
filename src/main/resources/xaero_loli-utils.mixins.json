@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "package": "com.bnuyhq.loli_utils.mixin.xaeros",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "HighlighterRegistryMixin"
+  ]
+}

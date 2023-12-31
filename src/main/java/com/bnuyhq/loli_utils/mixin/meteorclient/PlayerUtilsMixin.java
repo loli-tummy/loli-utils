@@ -11,10 +11,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = PlayerUtils.class, remap = false)
 public class PlayerUtilsMixin {
-    @Inject(method = "getPlayerColor", at = @At("HEAD"), cancellable = true)
-    private static void modifyColor(PlayerEntity entity, Color defaultColor, CallbackInfoReturnable<Color> cir) {
-        if (SpecialEffects.hasColor(entity)) {
-            cir.setReturnValue(SpecialEffects.getColor(entity));
-        }
+  @Inject(method = "getPlayerColor", at = @At("HEAD"), cancellable = true)
+  private static void modifyColor(
+      PlayerEntity entity, Color defaultColor, CallbackInfoReturnable<Color> cir) {
+    if (SpecialEffects.hasColor(entity)) {
+      cir.setReturnValue(SpecialEffects.getColor(entity));
     }
+  }
 }

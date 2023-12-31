@@ -18,7 +18,9 @@
     ]
   },
   "mixins": [
-    "loli-utils.mixins.json"
+    "loli-utils.mixins.json",
+    "xaero_loli-utils.mixins.json",
+    "meteorclient_loli-utils.mixins.json"
   ],
   "accessWidener": "loli-utils.accesswidener",
   "custom": {
