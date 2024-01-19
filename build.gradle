@@ -16,12 +16,8 @@ repositories {
         url = "https://maven.meteordev.org/snapshots"
     }
 
-    maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
+    maven { url = "https://www.cursemaven.com" }
+    maven { url = "https://masa.dy.fi/maven" }
 }
 
 dependencies {
@@ -36,6 +32,10 @@ dependencies {
 
     // Xaeros
     modImplementation "curse.maven:xaeros-world-map-${project.xaeros_world_map_projectid}:${project.xaeros_world_map_fileid}"
+
+    // Litematica
+    modImplementation "curse.maven:litematica-${project.litematica_projectid}:${project.litematica_fileid}"
+    modImplementation "fi.dy.masa.malilib:malilib-fabric-${project.minecraft_version}:${project.malilib_version}"
 }
 
 loom {

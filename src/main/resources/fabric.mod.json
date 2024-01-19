@@ -8,13 +8,14 @@
     "loli-tummy"
   ],
   "contact": {
+    "email": "",
     "repo": "https://github.com/loli-tummy/loli-utils"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.bnuyhq.loli_utils.LoliUtils"
+      "pictures.cunny.loli_utils.LoliUtils"
     ]
   },
   "mixins": [

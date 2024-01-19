@@ -1,9 +1,11 @@
-# Meteor Addon Template
+# Loli Utils
 
-A template to allow easy usage of the Meteor Addon API.
+An early (unpolished) release to do "mole rat" having access.
 
-### How to use:
+### Features
 
-- Clone this project
-- Use this template to create new modules/commands
-- Run the mod with Meteor.
+- Printer
+- Chunk Saving (with xaeros support.)
+- Packet Place
+- Chunk Analyzer (new chunks)
+- Auto Mend Bypass for constantiam.net
