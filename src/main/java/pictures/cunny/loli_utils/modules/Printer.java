@@ -117,6 +117,7 @@ public class Printer extends Module {
               .name("anchor")
               .description("Anchors player to placeable blocks.")
               .defaultValue(false)
+              .onChanged((b) -> anchoringTo = null)
               .build());
   private final Setting<Integer> yLevel =
       sgAnchor.add(
@@ -361,6 +362,7 @@ public class Printer extends Module {
     placeFading.clear();
     anchorToSort.clear();
     toSort.clear();
+    anchoringTo = null;
     pauseTillRefilled = false;
     if (baritone.getPathingBehavior().hasPath()) baritone.getPathingBehavior().cancelEverything();
     mc.options.forwardKey.setPressed(false);
