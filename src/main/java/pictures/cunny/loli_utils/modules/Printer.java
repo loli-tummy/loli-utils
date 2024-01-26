@@ -1,5 +1,7 @@
 package pictures.cunny.loli_utils.modules;
 
+import static meteordevelopment.meteorclient.MeteorClient.mc;
+
 import baritone.api.BaritoneAPI;
 import baritone.api.IBaritone;
 import baritone.api.pathing.goals.GoalNear;
@@ -559,7 +561,17 @@ public class Printer extends Module {
                     .intersects(Vec3d.of(pos), Vec3d.of(pos).add(1, 1, 1))) {
 
               if (containedColors.contains(MapColorCache.getColor(required.getBlock().asItem()))) {
-                toSort.add(new BlockPos(pos));
+                boolean isCarpet =
+                    required.getBlock().asItem().getTranslationKey().endsWith("carpet");
+                if (isCarpet) {
+                    toSort.add(new BlockPos(pos));
+                } else {
+                    Map.Entry<Float, Float> rot = BlockUtils.getRotation(true, pos);
+
+                    if (BlockUtils.canRaycast(pos, rot.getValue(), rot.getKey())) {
+                        toSort.add(new BlockPos(pos));
+                    }
+                }
               }
             }
           });

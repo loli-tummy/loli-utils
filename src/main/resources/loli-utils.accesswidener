@@ -10,3 +10,7 @@ accessible method net/minecraft/world/storage/StorageIoWorker writeResult ()V
 accessible class net/minecraft/client/render/MapRenderer$MapTexture
 accessible method net/minecraft/client/render/MapRenderer getMapTexture (ILnet/minecraft/item/map/MapState;)Lnet/minecraft/client/render/MapRenderer$MapTexture;
 accessible field net/minecraft/client/render/MapRenderer$MapTexture texture Lnet/minecraft/client/texture/NativeImageBackedTexture;
+
+mutable field net/minecraft/util/math/Vec3d x D
+mutable field net/minecraft/util/math/Vec3d y D
+mutable field net/minecraft/util/math/Vec3d z D

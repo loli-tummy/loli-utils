@@ -125,35 +125,29 @@ public class BlockUtils {
           if (canRaycast(pos, pitch, yaw)) {
             return Map.entry((float) yaw, (float) pitch);
           } else {
-            vec3d =
-                new Vec3d(
-                    (double) pos.getX() + ((double) direction.getOffsetX() * 0.5),
-                    (double) pos.getY() + ((double) direction.getOffsetY() * 0.5),
-                    (double) pos.getZ() + ((double) direction.getOffsetZ() * 0.5));
+            vec3d.x = (double) pos.getX() + ((double) direction.getOpposite().getOffsetX() * 0.5);
+            vec3d.y = (double) pos.getY() + ((double) direction.getOpposite().getOffsetY() * 0.5);
+            vec3d.z = (double) pos.getZ() + ((double) direction.getOpposite().getOffsetZ() * 0.5);
             yaw = Rotations.getYaw(vec3d);
             pitch = Rotations.getPitch(vec3d);
             if (canRaycast(pos, pitch, yaw)) {
               return Map.entry((float) yaw, (float) pitch);
             } else {
               BlockPos pos1 = pos.offset(direction);
-              vec3d =
-                  new Vec3d(
-                      (double) pos1.getX() + ((double) direction.getOffsetX() * 0.5),
-                      (double) pos1.getY() + ((double) direction.getOffsetY() * 0.5),
-                      (double) pos1.getZ() + ((double) direction.getOffsetZ() * 0.5));
+              vec3d.x = (double) pos1.getX() + ((double) direction.getOffsetX() * 0.5);
+              vec3d.y = (double) pos1.getY() + ((double) direction.getOffsetY() * 0.5);
+              vec3d.z = (double) pos1.getZ() + ((double) direction.getOffsetZ() * 0.5);
               yaw = Rotations.getYaw(vec3d);
               pitch = Rotations.getPitch(vec3d);
               if (canRaycast(pos, pitch, yaw)) {
                 return Map.entry((float) yaw, (float) pitch);
               } else {
-                vec3d =
-                    new Vec3d(
-                        (double) pos1.getX()
-                            + ((double) direction.getOpposite().getOffsetX() * 0.5),
-                        (double) pos1.getY()
-                            + ((double) direction.getOpposite().getOffsetY() * 0.5),
-                        (double) pos1.getZ()
-                            + ((double) direction.getOpposite().getOffsetZ() * 0.5));
+                vec3d.x =
+                    (double) pos1.getX() + ((double) direction.getOpposite().getOffsetX() * 0.5);
+                vec3d.y =
+                    (double) pos1.getY() + ((double) direction.getOpposite().getOffsetY() * 0.5);
+                vec3d.z =
+                    (double) pos1.getZ() + ((double) direction.getOpposite().getOffsetZ() * 0.5);
                 yaw = Rotations.getYaw(vec3d);
                 pitch = Rotations.getPitch(vec3d);
                 if (canRaycast(pos, pitch, yaw)) {
